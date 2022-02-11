@@ -1,0 +1,317 @@
+@charset 'utf-8';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.active {
+  color: #333 !important;
+}
+.display {
+  display: block!important;
+}
+html,
+body {
+  height: 100%;
+}
+html .outer_box,
+body .outer_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+html .outer_box > .left_box,
+body .outer_box > .left_box {
+  width: 375px;
+  height: 100%;
+  background: url('../img/login-bd.png') no-repeat 0 50%;
+  background-size: 375px 125%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+html .outer_box > .right_box,
+body .outer_box > .right_box {
+  height: 100%;
+  flex: 1;
+  margin-left: 375px;
+}
+html .outer_box > .right_box > .in_header,
+body .outer_box > .right_box > .in_header {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  height: 80px;
+}
+html .outer_box > .right_box > .in_header > .title,
+body .outer_box > .right_box > .in_header > .title {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 40px;
+}
+html .outer_box > .right_box > .in_header > .title > .xiaomi,
+body .outer_box > .right_box > .in_header > .title > .xiaomi {
+  margin-right: 5px;
+}
+html .outer_box > .right_box > .in_header > .mi_nav,
+body .outer_box > .right_box > .in_header > .mi_nav {
+  display: flex;
+  align-items: center;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > a,
+body .outer_box > .right_box > .in_header > .mi_nav > a {
+  text-decoration: none;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: inline-block;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #838383;
+  line-height: 40px;
+  position: relative;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > a > .mi-language-picker__icon,
+body .outer_box > .right_box > .in_header > .mi_nav > a > .mi-language-picker__icon {
+  transition: transform 0.2s linear;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > a:hover,
+body .outer_box > .right_box > .in_header > .mi_nav > a:hover {
+  color: #ff7600;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > a:hover .dropdown-menu,
+body .outer_box > .right_box > .in_header > .mi_nav > a:hover .dropdown-menu {
+  display: block;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > .language,
+body .outer_box > .right_box > .in_header > .mi_nav > .language {
+  padding: 5px 5px 0 5px;
+  line-height: 30px;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > .divder,
+body .outer_box > .right_box > .in_header > .mi_nav > .divder {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 14px;
+  width: 0;
+  border-right: 1px solid #838383;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > .dropdown-menu,
+body .outer_box > .right_box > .in_header > .mi_nav > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  list-style: none;
+  box-shadow: 0 5px 29px 0 hsla(0, 0%, 64%, 0.2);
+}
+html .outer_box > .right_box > .in_header > .mi_nav > .dropdown-menu > .dropdown-menu-item,
+body .outer_box > .right_box > .in_header > .mi_nav > .dropdown-menu > .dropdown-menu-item {
+  display: block;
+  width: 110px;
+  height: 40px;
+  text-decoration: none;
+  color: #838383;
+  font-size: 14px;
+  text-align: center;
+  padding: 9px 14px;
+}
+html .outer_box > .right_box > .in_header > .mi_nav > .dropdown-menu > .dropdown-menu-item:hover,
+body .outer_box > .right_box > .in_header > .mi_nav > .dropdown-menu > .dropdown-menu-item:hover {
+  background-color: #fff3e6;
+}
+html .outer_box > .right_box > .in_body,
+body .outer_box > .right_box > .in_body {
+  padding-top: 20px;
+  height: 641.8px;
+}
+html .outer_box > .right_box > .in_body > .in_box,
+body .outer_box > .right_box > .in_body > .in_box {
+  width: 450px;
+  height: 586px;
+  padding: 40px 40px 45px 40px;
+  margin: 0 auto 80px;
+  text-align: left;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 40px 45px;
+  position: relative;
+  min-width: 450px;
+  box-shadow: 0 20px 50px 0 hsla(0, 0%, 63.5%, 0.1);
+}
+html .outer_box > .right_box > .in_body > .in_box > .switch,
+body .outer_box > .right_box > .in_body > .in_box > .switch {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  opacity: 0.4;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-color: #ff5c00 #ff5c00 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 32px;
+  background-size: cover;
+}
+html .outer_box > .right_box > .in_body > .in_box > .switch:hover,
+body .outer_box > .right_box > .in_body > .in_box > .switch:hover {
+  opacity: 1;
+}
+html .outer_box > .right_box > .in_body > .in_box > .switch > .qr,
+body .outer_box > .right_box > .in_body > .in_box > .switch > .qr {
+  position: absolute;
+  top: -27px;
+  right: -30px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .nav-scroll,
+body .outer_box > .right_box > .in_body > .in_box > .nav-scroll {
+  margin-bottom: 10px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div,
+body .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div {
+  display: flex;
+  position: relative;
+}
+html .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div > .tab,
+body .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div > .tab {
+  margin-right: 20px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div > .tab > a,
+body .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div > .tab > a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 22px;
+  color: #bbb;
+}
+html .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div > .bar,
+body .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div > .bar {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 44px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ff6700;
+  transition: transform 0.3s linear;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form {
+  position: relative;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content {
+  display: none;
+  position: absolute;
+  padding-top: 20px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group {
+  position: relative;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .form-control,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .form-control {
+  width: 354px;
+  height: 60px;
+  background: #f9f9f9;
+  border: none;
+  padding: 30px 20px 10px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > label,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > label {
+  cursor: text;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 20px;
+  font-weight: 400;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 20px;
+  transition: top 0.15s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.15s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: calc(100% - 20px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox {
+  margin-top: 20px ;
+  font-size: 14px;
+  line-height: 20px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span {
+  color: #aaa;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span > a,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span > a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-btn,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-btn {
+  width: 356px;
+  height: 60px;
+  margin: 20px 0 10px;
+  color: #fff;
+  background-color: #ff5c00;
+  cursor: default;
+  opacity: 0.4;
+  font-size: 18px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-form-actions,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-form-actions {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-form-actions > a,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-form-actions > a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #ff5c00;
+  line-height: 25.5px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-sns-login > .mi-sns-login-title,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-sns-login > .mi-sns-login-title {
+  height: 40px;
+  font-size: 17px;
+  color: #aaa;
+  text-align: center;
+  line-height: 40px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-sns-login > .mi-sns-login-list,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-sns-login > .mi-sns-login-list {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-sns-login > .mi-sns-login-list > a,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-sns-login > .mi-sns-login-list > a {
+  display: inline-block;
+  margin: 0 12px;
+}
+html .outer_box > .right_box > .in_body > .mi-copyright,
+body .outer_box > .right_box > .in_body > .mi-copyright {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
+html .outer_box > .right_box > .in_body > .mi-copyright > a,
+body .outer_box > .right_box > .in_body > .mi-copyright > a {
+  color: #999;
+  text-decoration: none;
+}
