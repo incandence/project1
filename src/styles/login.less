@@ -51,8 +51,8 @@ html,body{
                         align-items: center;
                         >a{
                             text-decoration: none;
-                            margin-left: 12px;
-                            margin-right: 12px;
+                            margin-left: 10px;
+                            margin-right: 10px;
                             display: inline-block;
                             height: 40px;
                             font-size: 14px;
@@ -114,18 +114,15 @@ html,body{
                 }
                 >.in_body{
                     padding-top: 20px;
-                    height: 641.8px;
+
                     >.in_box{
                         width: 450px;
-                        height: 586px;
                         padding: 40px 40px 45px 40px;
                         margin: 0 auto 80px;
                         text-align: left;
-                        overflow: hidden;
                         border-radius: 4px;
                         padding: 40px 45px;
                         position: relative;
-                        min-width: 450px;
                         box-shadow: 0 20px 50px 0 hsla(0,0%,63.5%,.1);
                         >.switch{
                             cursor: pointer;
@@ -144,10 +141,50 @@ html,body{
                             &:hover{
                                 opacity: 1;
                             }
+                            &:hover >.popover-con{
+                                display: block;
+                                opacity: 1;
+                            }
                             >.qr{
                                 position: absolute;
                                 top: -27px;
                                 right:-30px;
+                            }
+                            >.popover-con{
+                                position: absolute;
+                                left: -122px;
+                                top: -18px;
+                                width: 86px;
+                                height: 31px;
+                                background-color: #ff5c00;
+                                box-shadow: 0 2px 4px 0 rgba(255,105,0,.45);
+                                border-radius: 4px;
+                                display: none;
+                                opacity: 0;
+                                >.popover-arrow{
+                                    position: absolute;
+                                    border-style: solid;
+                                    box-sizing: border-box;
+                                    color: rgba(0,0,0,.65);
+                                    position: absolute;
+                                    top: 33%;
+                                    z-index: 2;
+                                    user-select: text;
+                                    box-shadow: 0 2px 4px 0 rgba(255,105,0,.45);
+                                    border-color: #ff5c00;
+                                    border-width: 5px;
+                                    right: -4px;
+                                    border-color: #ff5c00 #ff5c00 rgba(0,0,0,0) rgba(0,0,0,0);
+                                    box-shadow: 3px -3px 7px rgba(0,0,0,.07);
+                                    transform: rotateZ(45deg);
+                                }
+                                >.popover-inner{
+                                    text-align: center;
+                                    line-height: 31px;
+                                    font-size: 14px;
+                                    color: #fff;
+                                    font-weight: 400;
+                                }
                             }
                         }
                         >.nav-scroll{
@@ -179,10 +216,12 @@ html,body{
                         }
                         >.mi-form{
                             position: relative;
+                            min-height: 416px;
                             >.mi-form-content{
                                 display: none;
                                 position: absolute;
                                 padding-top: 20px;
+                                min-height: 427px;
                                 >.input-group{
                                     position: relative;
                                     >.form-control{
@@ -211,11 +250,55 @@ html,body{
                                         white-space: nowrap;
                                         overflow: hidden;
                                     }
+                                    >.mi-form-helper-text{
+                                        margin-top: 10px;
+                                        font-size: 12px;
+                                        color: #999;
+                                        line-height: 20px;
+                                        color: #f04645;
+                                        display: none;
+                                    }
+                                    >.eyes{
+                                        position: absolute;
+                                        width: 60px;
+                                        height: 60px;
+                                        top: 0;
+                                        right: 0;
+                                        cursor: pointer;
+                                        &:hover >.icon{
+                                            color: rgba(0,0,0,.65);
+                                        }
+                                        >.icon{
+                                            position: absolute;
+                                            vertical-align: middle;
+                                            margin: 20px 20px;
+                                            color: rgba(0,0,0,.25);
+                                            transition: all .3s cubic-bezier(.645,.045,.355,1);
+                                            width: 20px;
+                                            height: 20px;
+                                            
+                                        }
+                                        >.icon:nth-of-type(2){
+                                            display: none;
+                                        }
+                                    }
                                 }
-                                >.checkbox{
+                                >.input-group:nth-of-type(2),.input-group:nth-of-type(3){
+                                    margin-top: 20px;
+                                }
+                                >.agreement{
+                                    user-select: none;
+                                    >.checkbox{
+                                        font-size: 30px;
+                                        vertical-align: middle;
+                                        :checked{
+                                            background-color: #ff6700;
+                                        }
+                                    }
                                     margin-top:20px ;
                                     font-size: 14px;
                                     line-height: 20px;
+                                    
                                     >span{
                                         color: #aaa;
                                         >a{
@@ -235,6 +318,7 @@ html,body{
                                     cursor: default;
                                     opacity: .4;
                                     font-size: 18px;
+                                    user-select: none;
                                 }
                                 >.mi-form-actions{
                                     height: 35px;
@@ -271,6 +355,76 @@ html,body{
                             
                         }
                     }
+                    >.in_box_t{
+                        position: relative;
+                        >.switch{
+                            >.icon{
+                                transform: translate(-14px,-23px);
+                            }
+                        }
+                        >.mi-scan-code-login{
+                            >.mi-scan-code-login_title{
+                                max-width: 360px;
+                                margin: 0 auto 30px;
+                                text-align: center;
+                                font-size: 22px;
+                                font-weight: 500;
+                                color: #333;
+                                line-height: 40px;
+                            }
+                            >.mi-login-qrcode{
+                                text-align: center;
+                                >img{
+                                    width: 180px;
+                                    height: 180px;
+                                }
+                            }
+                            >.mi-center-text{
+                                max-width: 360px;
+                                text-align: center;
+                                margin: 28px auto 0;
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: #333;
+                                line-height: 24px;
+                                >.icon{
+                                    margin-left: 6px;
+                                    vertical-align: middle;
+                                    color: #ddd;
+                                    &:hover{
+                                        color: #ff5c00;
+                                    }
+                                }
+                            }
+                            >.mi-scan-app{
+                                max-width: 360px;
+                                margin: 48px auto 0;
+                                >.mi-scan-app_title{
+                                    text-align: center;
+                                    font-size: 17px;
+                                    line-height: 1.45;
+                                    padding: 8px 0;
+                                    color: #aaa;
+                                }
+                                >.mi-scan-app_list{
+                                    margin-top: 18px;
+                                    text-align: center;
+                                    >.mi-scan-app_item{
+                                        display: inline-block;
+                                        width: 56px;
+                                        font-size: 12px;
+                                        margin: 0 10px;
+                                        text-decoration: none;
+                                        >img{
+                                            width: 46px;
+                                            height: 46px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
                     >.mi-copyright{
                         text-align: center;
                         color: #999;
@@ -280,6 +434,7 @@ html,body{
                             text-decoration: none;
                         }
                     }
+                    
                 }
             }
         }

@@ -64,8 +64,8 @@ body .outer_box > .right_box > .in_header > .mi_nav {
 html .outer_box > .right_box > .in_header > .mi_nav > a,
 body .outer_box > .right_box > .in_header > .mi_nav > a {
   text-decoration: none;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
   display: inline-block;
   height: 40px;
   font-size: 14px;
@@ -130,20 +130,16 @@ body .outer_box > .right_box > .in_header > .mi_nav > .dropdown-menu > .dropdown
 html .outer_box > .right_box > .in_body,
 body .outer_box > .right_box > .in_body {
   padding-top: 20px;
-  height: 641.8px;
 }
 html .outer_box > .right_box > .in_body > .in_box,
 body .outer_box > .right_box > .in_body > .in_box {
   width: 450px;
-  height: 586px;
   padding: 40px 40px 45px 40px;
   margin: 0 auto 80px;
   text-align: left;
-  overflow: hidden;
   border-radius: 4px;
   padding: 40px 45px;
   position: relative;
-  min-width: 450px;
   box-shadow: 0 20px 50px 0 hsla(0, 0%, 63.5%, 0.1);
 }
 html .outer_box > .right_box > .in_body > .in_box > .switch,
@@ -165,11 +161,54 @@ html .outer_box > .right_box > .in_body > .in_box > .switch:hover,
 body .outer_box > .right_box > .in_body > .in_box > .switch:hover {
   opacity: 1;
 }
+html .outer_box > .right_box > .in_body > .in_box > .switch:hover > .popover-con,
+body .outer_box > .right_box > .in_body > .in_box > .switch:hover > .popover-con {
+  display: block;
+  opacity: 1;
+}
 html .outer_box > .right_box > .in_body > .in_box > .switch > .qr,
 body .outer_box > .right_box > .in_body > .in_box > .switch > .qr {
   position: absolute;
   top: -27px;
   right: -30px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .switch > .popover-con,
+body .outer_box > .right_box > .in_body > .in_box > .switch > .popover-con {
+  position: absolute;
+  left: -122px;
+  top: -18px;
+  width: 86px;
+  height: 31px;
+  background-color: #ff5c00;
+  box-shadow: 0 2px 4px 0 rgba(255, 105, 0, 0.45);
+  border-radius: 4px;
+  display: none;
+  opacity: 0;
+}
+html .outer_box > .right_box > .in_body > .in_box > .switch > .popover-con > .popover-arrow,
+body .outer_box > .right_box > .in_body > .in_box > .switch > .popover-con > .popover-arrow {
+  border-style: solid;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  top: 33%;
+  z-index: 2;
+  user-select: text;
+  box-shadow: 0 2px 4px 0 rgba(255, 105, 0, 0.45);
+  border-color: #ff5c00;
+  border-width: 5px;
+  right: -4px;
+  border-color: #ff5c00 #ff5c00 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  box-shadow: 3px -3px 7px rgba(0, 0, 0, 0.07);
+  transform: rotateZ(45deg);
+}
+html .outer_box > .right_box > .in_body > .in_box > .switch > .popover-con > .popover-inner,
+body .outer_box > .right_box > .in_body > .in_box > .switch > .popover-con > .popover-inner {
+  text-align: center;
+  line-height: 31px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
 }
 html .outer_box > .right_box > .in_body > .in_box > .nav-scroll,
 body .outer_box > .right_box > .in_body > .in_box > .nav-scroll {
@@ -205,12 +244,14 @@ body .outer_box > .right_box > .in_body > .in_box > .nav-scroll > div > .bar {
 html .outer_box > .right_box > .in_body > .in_box > .mi-form,
 body .outer_box > .right_box > .in_body > .in_box > .mi-form {
   position: relative;
+  min-height: 416px;
 }
 html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content,
 body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content {
   display: none;
   position: absolute;
   padding-top: 20px;
+  min-height: 427px;
 }
 html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group,
 body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group {
@@ -244,18 +285,70 @@ body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content 
   white-space: nowrap;
   overflow: hidden;
 }
-html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox,
-body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox {
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .mi-form-helper-text,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .mi-form-helper-text {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+  line-height: 20px;
+  color: #f04645;
+  display: none;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes:hover > .icon,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes:hover > .icon {
+  color: rgba(0, 0, 0, 0.65);
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes > .icon,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes > .icon {
+  position: absolute;
+  vertical-align: middle;
+  margin: 20px 20px;
+  color: rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 20px;
+  height: 20px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes > .icon:nth-of-type(2),
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group > .eyes > .icon:nth-of-type(2) {
+  display: none;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group:nth-of-type(2),
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .input-group:nth-of-type(2),
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content .input-group:nth-of-type(3),
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content .input-group:nth-of-type(3) {
+  margin-top: 20px;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement {
+  user-select: none;
   margin-top: 20px ;
   font-size: 14px;
   line-height: 20px;
 }
-html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span,
-body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span {
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > .checkbox,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > .checkbox {
+  font-size: 30px;
+  vertical-align: middle;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > .checkbox :checked,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > .checkbox :checked {
+  background-color: #ff6700;
+}
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > span,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > span {
   color: #aaa;
 }
-html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span > a,
-body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .checkbox > span > a {
+html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > span > a,
+body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .agreement > span > a {
   text-decoration: none;
   font-size: 14px;
   color: #333;
@@ -270,6 +363,7 @@ body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content 
   cursor: default;
   opacity: 0.4;
   font-size: 18px;
+  user-select: none;
 }
 html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-form-actions,
 body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-form-actions {
@@ -303,6 +397,84 @@ html .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content 
 body .outer_box > .right_box > .in_body > .in_box > .mi-form > .mi-form-content > .mi-sns-login > .mi-sns-login-list > a {
   display: inline-block;
   margin: 0 12px;
+}
+html .outer_box > .right_box > .in_body > .in_box_t,
+body .outer_box > .right_box > .in_body > .in_box_t {
+  position: relative;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .switch > .icon,
+body .outer_box > .right_box > .in_body > .in_box_t > .switch > .icon {
+  transform: translate(-14px, -23px);
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-code-login_title,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-code-login_title {
+  max-width: 360px;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #333;
+  line-height: 40px;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-login-qrcode,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-login-qrcode {
+  text-align: center;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-login-qrcode > img,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-login-qrcode > img {
+  width: 180px;
+  height: 180px;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-center-text,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-center-text {
+  max-width: 360px;
+  text-align: center;
+  margin: 28px auto 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  line-height: 24px;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-center-text > .icon,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-center-text > .icon {
+  margin-left: 6px;
+  vertical-align: middle;
+  color: #ddd;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-center-text > .icon:hover,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-center-text > .icon:hover {
+  color: #ff5c00;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app {
+  max-width: 360px;
+  margin: 48px auto 0;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_title,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_title {
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.45;
+  padding: 8px 0;
+  color: #aaa;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_list,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_list {
+  margin-top: 18px;
+  text-align: center;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_list > .mi-scan-app_item,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_list > .mi-scan-app_item {
+  display: inline-block;
+  width: 56px;
+  font-size: 12px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+html .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_list > .mi-scan-app_item > img,
+body .outer_box > .right_box > .in_body > .in_box_t > .mi-scan-code-login > .mi-scan-app > .mi-scan-app_list > .mi-scan-app_item > img {
+  width: 46px;
+  height: 46px;
 }
 html .outer_box > .right_box > .in_body > .mi-copyright,
 body .outer_box > .right_box > .in_body > .mi-copyright {

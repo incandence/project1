@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="./css/idnex.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://at.alicdn.com/t/font_3161865_hmp8inbbbh.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/jquery.slider.js"></script>
+    <script src="./js/jquery.slider2.js"></script>
 </head>
 <style type="text/css">
     .icon {
@@ -65,12 +65,12 @@
                     </div>
 
                     <div class="h_right">
-                        <a href="">登录</a>
+                        <a href="./login.html">登录</a>
                         <span>|</span>
                         <a href="">注册</a>
                         <span>|</span>
                         <a href="" class="message">消息通知</a>
-                        <a href="" class="shop active2">
+                        <a href="./shop.html" class="shop active2">
                             <svg class="icon " aria-hidden="true">
                                 <use xlink:href="#icon-gouwuche"></use>
                             </svg>
@@ -719,13 +719,13 @@
                     </ul>
                 </div>
     
-                <div class="slider">
+                <div class="slide">
                     <div>
                         <img src="./img/slider-new.png" alt="">
                         <img src="./img/slider-1.png" alt="">
                         <img src="./img/slider-3.png" alt="">
                     </div>
-    
+                    <ul></ul>
                     <span class="prev">&lt;</span>
                     <span class="next">&gt;</span>
                 </div>
@@ -818,51 +818,52 @@
                     <div class="box1-bd-right">
                         <li><a href="">
                                 <div class="figure">
-                                    <img src="./img/box1-bd-right-1.png" alt="">
+                                    <img src="" alt="">
                                 </div>
-                                <p class="title">Xiaomi 12 Pro</p>
-                                <p class="desc">全新晓龙8 | 2k AMOLED屏幕</p>
-                                <p class="price">4699元起</p>
+                                <p class="title"></p>
+                                <p class="desc"></p>
+                                <p><span class="price"></span>元起</p>
                             </a></li>
                         <li><a href="">
                                 <div class="figure">
-                                    <img src="./img/box1-bd-right-2.png" alt="">
+                                    <img src="" alt="">
                                 </div>
-                                <p class="title">Xiaomi 12</p>
-                                <p class="desc">全新晓龙8 | 2k 5000万主摄</p>
-                                <p class="price">3699元起</p>
+                                <p class="title"></p>
+                                <p class="desc"></p>
+                                <p><span class="price"></span>元起</p>
                             </a></li>
                         <li><a href="">
                                 <div class="figure">
-                                    <img src="./img/box1-bd-right-3.png" alt="">
+                                    <img src="" alt="">
                                 </div>
-                                <p class="title">Xiaomi 12 X</p>
-                                <p class="desc">晓龙870 | 5000万主摄</p>
-                                <p class="price">3199元起</p>
+                                <p class="title"></p>
+                                <p class="desc"></p>
+                                <p><span class="price"></span>元起</p>
                             </a></li>
                         <li><a href="">
                                 <div class="figure">
-                                    <img src="./img/box1-bd-right-4.png" alt="">
+                                    <img src="" alt="">
                                 </div>
-                                <p class="title">Xiaomi 11 青春活力版</p>
-                                <p class="desc">轻薄5G，内外皆出彩</p>
-                                <p class="price">1999元起</p>
+                                <p class="title"></p>
+                                <p class="desc"></p>
+                                <p><span class="price"></span>元起</p>
                             </a></li>
                         <li><a href="">
                                 <div class="figure">
-                                    <img src="./img/box1-bd-right-5.png" alt="">
+                                    <img src="" alt="">
                                 </div>
-                                <p class="title">Redmi Note 11 Pro系列</p>
-                                <p class="desc">三星AMOLED高刷屏</p>
-                                <p class="price">1799元起</p>
+                                <p class="title"></p>
+                                <p class="desc"></p>
+                                <p><span class="price"></span>元起</p>
+                                
                             </a></li>
                         <li><a href="">
                                 <div class="figure">
-                                    <img src="./img/box1-bd-right-6.png" alt="">
+                                    <img src="" alt="">
                                 </div>
-                                <p class="title">Redmi Note 11 5G</p>
-                                <p class="desc">5000mAh大电量</p>
-                                <p class="price">1199元起</p>
+                                <p class="title"></p>
+                                <p class="desc"></p>
+                                <p><span class="price"></span>元起</p>
                             </a></li>
                         <li><a href="">
                                 <div class="figure">
@@ -1839,12 +1840,7 @@
         </a>
     </div>
     <script>
-        $(function () {
-            $('.slider').slider({
-                speed: 600, // 动画速度
-                delay: 5000 // 间隔时间
-            });
-        });
+    $('.slide').slider();
     </script>
 </body>
 

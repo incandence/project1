@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>item</title>
     <link rel="stylesheet" href="./css/item.css">
     <script src="https://at.alicdn.com/t/font_3161865_hmp8inbbbh.js"></script>
     <script src="./js/jquery.js"></script>
+    <script src="./js/cookie.js"></script>
     <script src="./js/item.js"></script>
-    <script src="./js/jquery.slider.js"></script>
+    <script src="./js/jquery.slider2.js"></script>
 </head>
 <style type="text/css">
     .icon {
@@ -745,22 +746,65 @@
                 </div>
             </div>
         </div>
+        <div class="xm-product-box xm-product-box-f">
+            <div class="container">
+                <h2>Xiaomi 12 Pro</h2>
+
+                <div class="con">
+                    <div class="con-l">
+                        <span class="separator">|</span>
+                        <a href="">Xiaomi 12</a>
+                        <span class="separator">|</span>
+                        <a href="">Xiaomi 12X</a>
+                    </div>
+                    <div class="con-r">
+                        <a href="">概述页</a>
+                        <span class="separator">|</span>
+                        <a href="">参数页</a>
+                        <span class="separator">|</span>
+                        <a href="">F码通道</a>
+                        <span class="separator">|</span>
+                        <a href="">咨询客服</a>
+                        <span class="separator">|</span>
+                        <a href="">用户评价</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </header>
-    <main style="height: 1000px;">
+    <main>
         <div class="product-box">
             <div class="container">
                 <div class="img-left">
-                    <img src="./img/item-slider-1.png" alt="">
+                    <div class="slide">
+                        <div>
+                            <!-- <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt=""> -->
+                        </div>
+                        <span class="prev"></span>
+                        <span class="next"></span>
+                        <ul class="bar">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </ul>
+                    </div>
                 </div>
                 <div class="product-content">
-                    <h2>Xiaomi 12 Pro</h2>
+                    <h2></h2>
                     <p class="sale-desc">
                         <span>「新品热卖中！至高享24期免息；信用卡分期至高立减216元；+99元得50W立式无线充；+749元得MiCare保障服务」</span>
                         全新一代 骁龙8 移动平台｜2K AMOLED 屏幕｜5000万超清三主摄 | CyberFocus 万物追焦｜全焦段夜景｜120W 澎湃秒充
                     </p>
                     <p class="company-info">小米自营</p>
-                    <p class="price-info">5399 元</p>
+                    <p class="price-info"><span></span>  元</p>
                     <div class="flow-box">
                         <span class="flow-tag">赠品</span>
                         <span class="flow-name">
@@ -798,18 +842,226 @@
                     </div>
                     <div class="buy-option">
                         <div class="option-box">
-                            <div class="title">
-                                <ul>
-                                    <li>12GB+256GB</li>
-                                    <li>8GB+128GB</li>
-                                    <li>8GB+256GB</li>
-                                </ul>
+                            <div class="title">选择版本</div>
+                            <ul class="config">
+
+                            </ul>
+                        </div>
+                        <div class="option-box">
+                            <div class="title">选择颜色</div>
+                            <ul class="color">
+
+                            </ul>
+                        </div>
+                        <div class="option-box">
+                            <div class="title">选择</div>
+                            <ul class="version">
+                                <li class="active4">标准版</li>
+                                <li>情意荣荣暖盒套装</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="user"></div>
+                    <div class="service-items-box">
+                        <div class="title">选择小米提供的尊享服务 <a href="">了解尊享服务></a></div>
+                        <div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service.png" alt="">
+                                <div class="service-con">
+                                    <h3>MiCare保障服务 <span>已省150元</span></h3>
+                                    <p class="desc">享碎屏、延保、换电池、保值换新4大权益</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">服务条款 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">749元</div>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="service-items-box">
+                        <div class="title">选择小米提供的意外服务 <a href="">了解意外保护></a></div>
+                        <div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service.png" alt="">
+                                <div class="service-con">
+                                    <h3>意外保障服务 <span>意外损免费修</span></h3>
+                                    <p class="desc">1年1次意外损坏 官方原厂 免费维修</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">服务条款 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">599元</div>
+                            </div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service.png" alt="">
+                                <div class="service-con">
+                                    <h3>碎屏保障服务 <span>碎屏免费修</span></h3>
+                                    <p class="desc">1年1次碎屏 官方原厂 免费维修</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">服务条款 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">349元</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="service-items-box">
+                        <div class="title">选择小米提供的延长保修 <a href="">了解延长保修></a></div>
+                        <div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service.png" alt="">
+                                <div class="service-con">
+                                    <h3>延长保修服务 <span>质保延长1年</span></h3>
+                                    <p class="desc">性能故障 官方原厂 多次免费维修</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">服务条款 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">199元</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="service-items-box">
+                        <div class="title">选择小米提供的云空间服务 <a href="">了解云空间服务></a></div>
+                        <div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service-2.png" alt="">
+                                <div class="service-con">
+                                    <h3>云空间年卡200G <span>208元</span></h3>
+                                    <p class="desc">主商品签收后，自动激活至下单帐号</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">注意事项 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">208元</div>
+                            </div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service-2.png" alt="">
+                                <div class="service-con">
+                                    <h3>云空间年卡50G <span>58元</span></h3>
+                                    <p class="desc">主商品签收后，自动激活至下单帐号</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">注意事项 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">58元</div>
+                            </div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service-2.png" alt="">
+                                <div class="service-con">
+                                    <h3>云空间月卡200G <span>21元</span></h3>
+                                    <p class="desc">主商品签收后，自动激活至下单帐号</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">注意事项 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">21元</div>
+                            </div>
+                            <div class="service-box">
+                                <input type="checkbox" class="tui-checkbox">
+                                <img src="./img/items-service-2.png" alt="">
+                                <div class="service-con">
+                                    <h3>云空间月卡50G <span>6元</span></h3>
+                                    <p class="desc">主商品签收后，自动激活至下单帐号</p>
+                                    <div class="agreement-box">
+                                        <input type="checkbox" class="checkbox">
+                                        我已阅读 <a href="">注意事项 |</a> <a href="">常见问题</a>
+                                    </div>
+                                </div>
+                                <div class="price">6元</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="selected-list">
+                        <ul>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+
+                        </ul>
+                        <div class="total-price">总计： <span>5399元</span> </div>
+                    </div>
+                    <div class="btn-box">
+                        <div class="sale-btn">
+                            <a href="javascript:;">加入购物车</a>
+                        </div>
+                        <div class="favorite-btn">
+                            <a href=""><svg t="1644589774847" class="like" viewBox="0 0 1024 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" p-id="3931" width="18" height="18">
+                                    <path
+                                        d="M484.072727 218.763636c-44.218182-60.509091-95.418182-90.763636-158.254545-90.763636-121.018182 0-221.090909 109.381818-221.090909 246.690909 0 67.490909 18.618182 111.709091 67.490909 190.836364 6.981818 9.309091 13.963636 20.945455 20.945454 30.254545 30.254545 41.890909 72.145455 86.109091 121.018182 130.327273 39.563636 37.236364 81.454545 72.145455 123.345455 104.727273 13.963636 11.636364 27.927273 23.272727 41.890909 32.581818 6.981818 4.654545 18.618182 13.963636 20.945454 13.963636 4.654545 6.981818 6.981818 6.981818 11.636364 6.981818s6.981818-2.327273 11.636364-4.654545l20.945454-13.963636c13.963636-9.309091 27.927273-20.945455 41.890909-32.581819 41.890909-32.581818 83.781818-69.818182 123.345455-104.727272 48.872727-46.545455 90.763636-90.763636 121.018182-130.327273 6.981818-11.636364 13.963636-20.945455 20.945454-30.254546 51.2-79.127273 67.490909-123.345455 67.490909-190.836363 0-137.309091-100.072727-246.690909-221.090909-246.690909-62.836364 0-114.036364 30.254545-158.254545 90.763636L512 256l-27.927273-37.236364zM698.181818 58.181818c160.581818 0 290.909091 141.963636 290.909091 316.509091 0 83.781818-23.272727 139.636364-79.127273 228.072727-6.981818 11.636364-16.290909 23.272727-23.272727 34.909091-32.581818 44.218182-76.8 90.763636-128 139.636364-39.563636 37.236364-83.781818 74.472727-128 109.381818-25.6 20.945455-72.145455 53.527273-62.836364 46.545455-18.618182 13.963636-37.236364 20.945455-55.854545 20.945454-18.618182 0-39.563636-6.981818-53.527273-18.618182 9.309091 6.981818-37.236364-27.927273-62.836363-46.545454-44.218182-34.909091-88.436364-72.145455-128-109.381818-51.2-48.872727-95.418182-95.418182-128-139.636364-9.309091-11.636364-16.290909-23.272727-23.272728-34.909091-55.854545-90.763636-79.127273-144.290909-79.127272-228.072727C34.909091 200.145455 162.909091 58.181818 325.818182 58.181818c72.145455 0 134.981818 30.254545 186.181818 83.781818 51.2-53.527273 114.036364-83.781818 186.181818-83.781818z"
+                                        fill="#ffffff" p-id="3932"></path>
+                                </svg>喜欢</a>
+                        </div>
+                    </div>
+                    <div class="after-sale-info">
+                        <span><svg t="1644590000912" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5031" width="60" height="60">
+                                <path
+                                    d="M512 960c-247.424 0-448-200.576-448-448 0-247.424 200.576-448 448-448 247.424 0 448 200.576 448 448C960 759.424 759.424 960 512 960L512 960zM512 163.584C319.552 163.584 163.584 319.552 163.584 512c0 192.448 155.968 348.48 348.416 348.48 192.448 0 348.416-156.032 348.416-348.416C860.416 319.68 704.448 163.584 512 163.584L512 163.584zM776 400.576l-316.8 316.8c-9.728 9.728-25.472 9.728-35.2 0l-176-176c-9.728-9.728-9.728-25.472 0-35.2l35.2-35.2c9.728-9.728 25.472-9.728 35.2 0L441.6 594.176l264-264c9.728-9.728 25.472-9.728 35.2 0l35.2 35.2C785.728 375.104 785.728 390.848 776 400.576L776 400.576z"
+                                    p-id="5032" fill="#b0b0b0"></path>
+                            </svg>小米自营</span>
+                        <span><svg t="1644590000912" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5031" width="60" height="60">
+                                <path
+                                    d="M512 960c-247.424 0-448-200.576-448-448 0-247.424 200.576-448 448-448 247.424 0 448 200.576 448 448C960 759.424 759.424 960 512 960L512 960zM512 163.584C319.552 163.584 163.584 319.552 163.584 512c0 192.448 155.968 348.48 348.416 348.48 192.448 0 348.416-156.032 348.416-348.416C860.416 319.68 704.448 163.584 512 163.584L512 163.584zM776 400.576l-316.8 316.8c-9.728 9.728-25.472 9.728-35.2 0l-176-176c-9.728-9.728-9.728-25.472 0-35.2l35.2-35.2c9.728-9.728 25.472-9.728 35.2 0L441.6 594.176l264-264c9.728-9.728 25.472-9.728 35.2 0l35.2 35.2C785.728 375.104 785.728 390.848 776 400.576L776 400.576z"
+                                    p-id="5032" fill="#b0b0b0"></path>
+                            </svg>小米发货</span>
+                        <span><svg t="1644590000912" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5031" width="60" height="60">
+                                <path
+                                    d="M512 960c-247.424 0-448-200.576-448-448 0-247.424 200.576-448 448-448 247.424 0 448 200.576 448 448C960 759.424 759.424 960 512 960L512 960zM512 163.584C319.552 163.584 163.584 319.552 163.584 512c0 192.448 155.968 348.48 348.416 348.48 192.448 0 348.416-156.032 348.416-348.416C860.416 319.68 704.448 163.584 512 163.584L512 163.584zM776 400.576l-316.8 316.8c-9.728 9.728-25.472 9.728-35.2 0l-176-176c-9.728-9.728-9.728-25.472 0-35.2l35.2-35.2c9.728-9.728 25.472-9.728 35.2 0L441.6 594.176l264-264c9.728-9.728 25.472-9.728 35.2 0l35.2 35.2C785.728 375.104 785.728 390.848 776 400.576L776 400.576z"
+                                    p-id="5032" fill="#b0b0b0"></path>
+                            </svg>15天无理由退货</span>
+                        <span><svg t="1644590000912" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5031" width="60" height="60">
+                                <path
+                                    d="M512 960c-247.424 0-448-200.576-448-448 0-247.424 200.576-448 448-448 247.424 0 448 200.576 448 448C960 759.424 759.424 960 512 960L512 960zM512 163.584C319.552 163.584 163.584 319.552 163.584 512c0 192.448 155.968 348.48 348.416 348.48 192.448 0 348.416-156.032 348.416-348.416C860.416 319.68 704.448 163.584 512 163.584L512 163.584zM776 400.576l-316.8 316.8c-9.728 9.728-25.472 9.728-35.2 0l-176-176c-9.728-9.728-9.728-25.472 0-35.2l35.2-35.2c9.728-9.728 25.472-9.728 35.2 0L441.6 594.176l264-264c9.728-9.728 25.472-9.728 35.2 0l35.2 35.2C785.728 375.104 785.728 390.848 776 400.576L776 400.576z"
+                                    p-id="5032" fill="#b0b0b0"></path>
+                            </svg>运费说明</span>
+                        <span><svg t="1644590000912" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5031" width="60" height="60">
+                                <path
+                                    d="M512 960c-247.424 0-448-200.576-448-448 0-247.424 200.576-448 448-448 247.424 0 448 200.576 448 448C960 759.424 759.424 960 512 960L512 960zM512 163.584C319.552 163.584 163.584 319.552 163.584 512c0 192.448 155.968 348.48 348.416 348.48 192.448 0 348.416-156.032 348.416-348.416C860.416 319.68 704.448 163.584 512 163.584L512 163.584zM776 400.576l-316.8 316.8c-9.728 9.728-25.472 9.728-35.2 0l-176-176c-9.728-9.728-9.728-25.472 0-35.2l35.2-35.2c9.728-9.728 25.472-9.728 35.2 0L441.6 594.176l264-264c9.728-9.728 25.472-9.728 35.2 0l35.2 35.2C785.728 375.104 785.728 390.848 776 400.576L776 400.576z"
+                                    p-id="5032" fill="#b0b0b0"></path>
+                            </svg>企业信息</span><br>
+                        <span><svg t="1644590000912" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5031" width="60" height="60">
+                                <path
+                                    d="M512 960c-247.424 0-448-200.576-448-448 0-247.424 200.576-448 448-448 247.424 0 448 200.576 448 448C960 759.424 759.424 960 512 960L512 960zM512 163.584C319.552 163.584 163.584 319.552 163.584 512c0 192.448 155.968 348.48 348.416 348.48 192.448 0 348.416-156.032 348.416-348.416C860.416 319.68 704.448 163.584 512 163.584L512 163.584zM776 400.576l-316.8 316.8c-9.728 9.728-25.472 9.728-35.2 0l-176-176c-9.728-9.728-9.728-25.472 0-35.2l35.2-35.2c9.728-9.728 25.472-9.728 35.2 0L441.6 594.176l264-264c9.728-9.728 25.472-9.728 35.2 0l35.2 35.2C785.728 375.104 785.728 390.848 776 400.576L776 400.576z"
+                                    p-id="5032" fill="#b0b0b0"></path>
+                            </svg>7天价格保护</span>
                     </div>
 
                 </div>
             </div>
+        </div>
+        <div class="detail-box">
+            <div class="container">
+                <h3>价格说明</h3>
+                <img src="./img/detail-img.png" alt="">
+            </div>
+
         </div>
     </main>
 
@@ -1026,55 +1278,57 @@
         </div>
 
     </footer>
-
     <div class="home-tool">
         <a href="" class="f">
             <div class="f-figure">
                 <img src="./img/f-1.png" alt="">
                 <img src="./img/f-1hover.png" alt="">
             </div>
-            <span class="f-text">手机APP</span>
-            <div class="f-qr">
-                <img src="./img/f-1hover2.png" alt="">
-                <span>扫码领取新人百元礼包</span>
-            </div>
+                <span class="f-text">手机APP</span>
+                <div class="f-qr">
+                    <img src="./img/f-1hover2.png" alt="">
+                    <span>扫码领取新人百元礼包</span>
+                </div>
         </a>
         <a href="" class="f">
             <div class="f-figure">
                 <img src="./img/f-2.png" alt="">
                 <img src="./img/f-2hover.png" alt="">
             </div>
-            <span class="f-text">手机APP</span>
+                <span class="f-text">个人中心</span>
         </a>
         <a href="" class="f">
             <div class="f-figure">
                 <img src="./img/f-3.png" alt="">
                 <img src="./img/f-3hover.png" alt="">
             </div>
-            <span class="f-text">手机APP</span>
+                <span class="f-text">售后服务</span>
         </a>
         <a href="" class="f">
             <div class="f-figure">
                 <img src="./img/f-4.png" alt="">
                 <img src="./img/f-4hover.png" alt="">
             </div>
-            <span class="f-text">手机APP</span>
+                <span class="f-text">人工客服</span>
         </a>
         <a href="" class="f">
             <div class="f-figure">
                 <img src="./img/f-5.png" alt="">
                 <img src="./img/f-5hover.png" alt="">
             </div>
-            <span class="f-text">手机APP</span>
+                <span class="f-text">购物车</span>
+        </a>
+        <a href="#" class="f f-6">
+            <div class="f-figure">
+                <img src="./img/f-6.png" alt="">
+                <img src="./img/f-6hover.png" alt="">
+            </div>
+                <span class="f-text">回顶部</span>
         </a>
     </div>
+
     <script>
-        $(function () {
-            $('.slider').slider({
-                speed: 600, // 动画速度
-                delay: 2000 // 间隔时间
-            });
-        });
+        $('.slide').slider();
     </script>
 </body>
 
